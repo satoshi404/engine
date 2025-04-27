@@ -1,12 +1,10 @@
-import platform
-import engine
+import platform_engine
 import time
 
 def main():
     try:
         # Create window
-        config = platform.WindowConfig("Test Platform", 0, 0, 800, 600)
-
+        config = platform_engine.WindowConfig("Test Platform", 0, 0, 800, 600)
         window = platform_engine.Window(config)
         window.show()
 
@@ -31,11 +29,11 @@ def main():
         last_time = time.time()
 
         # Main loop
-        while running and window.should_run():
+        while running and window.should_run() == platform_engine.State.RUNNING:
             # Handle events
-            while event.poll():
+            while event.poll(renderer):
                 kind = event.kind()
-                if kind == platform_engine.EventKind.KEY_ESC:
+                if kind == platform_engine.EventKind.KEY_ESC or kind == platform_engine.EventKind.EXIT:
                     running = False
                 elif kind == platform_engine.EventKind.KEY_SPACE:
                     rect_velocity = -rect_velocity  # Reverse direction
@@ -62,6 +60,8 @@ def main():
 
     except Exception as e:
         print(f"Error: {e}")
+    finally:
+        print("Cleaning up...")
 
 if __name__ == "__main__":
     main()

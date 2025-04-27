@@ -35,11 +35,18 @@ find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
 find_package(pybind11 CONFIG REQUIRED)
 
 # Python binding
-pybind11_add_module(engine
+pybind11_add_module(platform_engine
         bindings/python_binding.cpp
         source/platform/window_x11.cpp
         source/platform/event_x11.cpp
         source/platform/renderer.cpp
 )
-target_include_directories(engine PRIVATE source)
-target_link_libraries(engine PRIVATE X11::X11)
+target_include_directories(platform_engine PRIVATE source)
+target_link_libraries(platform_engine PRIVATE X11::X11)
+
+# Copy the Python module to the python directory
+add_custom_command(TARGET platform_engine POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy
+        $<TARGET_FILE:platform_engine>
+        ${CMAKE_SOURCE_DIR}/python/
+)

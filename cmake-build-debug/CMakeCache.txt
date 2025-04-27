@@ -677,23 +677,8 @@ engineProject_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 engineProject_SOURCE_DIR:STATIC=/home/satoshi/Documentos/workspace/engine
 
-//Value Computed by CMake
-engine_BINARY_DIR:STATIC=/home/satoshi/Documentos/workspace/engine/cmake-build-debug
-
-//Value Computed by CMake
-engine_IS_TOP_LEVEL:STATIC=ON
-
-//Dependencies for the target
-engine_LIB_DEPENDS:STATIC=general;X11::X11;
-
-//Value Computed by CMake
-engine_SOURCE_DIR:STATIC=/home/satoshi/Documentos/workspace/engine
-
 //Path to a library.
 pkgcfg_lib_PKG_FONTCONFIG_fontconfig:FILEPATH=/usr/lib/libfontconfig.so
-
-//Dependencies for the target
-platform_LIB_DEPENDS:STATIC=general;X11::X11;
 
 //Dependencies for the target
 platform_engine_LIB_DEPENDS:STATIC=general;X11::X11;
@@ -1211,9 +1196,7 @@ _Python3_EXECUTABLE:INTERNAL=/home/satoshi/Documentos/workspace/engine/.venv/bin
 _Python3_INCLUDE_DIR:INTERNAL=/usr/include/python3.13
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;13;3;64;<none>;cpython-313-x86_64-linux-gnu;abi3;/usr/lib/python3.13;/home/satoshi/Documentos/workspace/engine/.venv/lib/python3.13;/home/satoshi/Documentos/workspace/engine/.venv/lib/python3.13/site-packages;/home/satoshi/Documentos/workspace/engine/.venv/lib/python3.13/site-packages
-_Python3_INTERPRETER_SIGNATURE:INTERNAL=9b73aa302b6cd62d6ca9e7f378bc55ca
-//Interpreter reason failure
-_Python3_Interpreter_REASON_FAILURE:INTERNAL=
+_Python3_INTERPRETER_SIGNATURE:INTERNAL=3deb02cf00a9390db27d87660e275725
 //Path to a library.
 _Python3_LIBRARY_RELEASE:INTERNAL=/usr/lib/libpython3.13.so
 //NumPy reason failure

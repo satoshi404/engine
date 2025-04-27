@@ -9,11 +9,17 @@ namespace py = pybind11;
 PYBIND11_MODULE(platform_engine, m) {
     m.doc() = "Python bindings for the platform game engine (non-refactored)";
 
+    // State enum
+    py::enum_<platform::State>(m, "State")
+        .value("RUNNING", platform::State::RUNNING)
+        .value("CLOSE", platform::State::CLOSE)
+        .export_values();
+
     // WindowConfig
     py::class_<platform::WindowConfig>(m, "WindowConfig")
         .def(py::init([](const std::string& title, int x, int y, int width, int height) {
             platform::WindowConfig config;
-            config.title = title.c_str(); // Assume title is std::string; adjust if needed
+            config.title = title.c_str();
             config.x = x;
             config.y = y;
             config.width = width;
@@ -82,7 +88,7 @@ PYBIND11_MODULE(platform_engine, m) {
     // Event
     py::class_<platform::Event>(m, "Event")
         .def(py::init<const platform::Window&>())
-        .def("poll", &platform::Event::poll)
+        .def("poll", &platform::Event::poll, py::arg("renderer"))
         .def("kind", &platform::Event::kind);
 
     // Renderer
