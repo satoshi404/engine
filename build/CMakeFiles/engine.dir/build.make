@@ -86,24 +86,10 @@ CMakeFiles/engine.dir/source/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/source/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/satoshi/Documentos/workspace/engine/source/main.cpp -o CMakeFiles/engine.dir/source/main.cpp.s
 
-CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o: /home/satoshi/Documentos/workspace/engine/source/core/launcher/launcher.cpp
-CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o -MF CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o.d -o CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/core/launcher/launcher.cpp
-
-CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/satoshi/Documentos/workspace/engine/source/core/launcher/launcher.cpp > CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.i
-
-CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/satoshi/Documentos/workspace/engine/source/core/launcher/launcher.cpp -o CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.s
-
 CMakeFiles/engine.dir/source/platform/window_x11.cpp.o: CMakeFiles/engine.dir/flags.make
 CMakeFiles/engine.dir/source/platform/window_x11.cpp.o: /home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp
 CMakeFiles/engine.dir/source/platform/window_x11.cpp.o: CMakeFiles/engine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/engine.dir/source/platform/window_x11.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/engine.dir/source/platform/window_x11.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/source/platform/window_x11.cpp.o -MF CMakeFiles/engine.dir/source/platform/window_x11.cpp.o.d -o CMakeFiles/engine.dir/source/platform/window_x11.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp
 
 CMakeFiles/engine.dir/source/platform/window_x11.cpp.i: cmake_force
@@ -114,23 +100,53 @@ CMakeFiles/engine.dir/source/platform/window_x11.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/source/platform/window_x11.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp -o CMakeFiles/engine.dir/source/platform/window_x11.cpp.s
 
+CMakeFiles/engine.dir/source/platform/event_x11.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/source/platform/event_x11.cpp.o: /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp
+CMakeFiles/engine.dir/source/platform/event_x11.cpp.o: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/engine.dir/source/platform/event_x11.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/source/platform/event_x11.cpp.o -MF CMakeFiles/engine.dir/source/platform/event_x11.cpp.o.d -o CMakeFiles/engine.dir/source/platform/event_x11.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp
+
+CMakeFiles/engine.dir/source/platform/event_x11.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/source/platform/event_x11.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp > CMakeFiles/engine.dir/source/platform/event_x11.cpp.i
+
+CMakeFiles/engine.dir/source/platform/event_x11.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/source/platform/event_x11.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp -o CMakeFiles/engine.dir/source/platform/event_x11.cpp.s
+
+CMakeFiles/engine.dir/source/platform/renderer.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/source/platform/renderer.cpp.o: /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp
+CMakeFiles/engine.dir/source/platform/renderer.cpp.o: CMakeFiles/engine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/source/platform/renderer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/engine.dir/source/platform/renderer.cpp.o -MF CMakeFiles/engine.dir/source/platform/renderer.cpp.o.d -o CMakeFiles/engine.dir/source/platform/renderer.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp
+
+CMakeFiles/engine.dir/source/platform/renderer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/source/platform/renderer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp > CMakeFiles/engine.dir/source/platform/renderer.cpp.i
+
+CMakeFiles/engine.dir/source/platform/renderer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/source/platform/renderer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp -o CMakeFiles/engine.dir/source/platform/renderer.cpp.s
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/source/main.cpp.o" \
-"CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o" \
-"CMakeFiles/engine.dir/source/platform/window_x11.cpp.o"
+"CMakeFiles/engine.dir/source/platform/window_x11.cpp.o" \
+"CMakeFiles/engine.dir/source/platform/event_x11.cpp.o" \
+"CMakeFiles/engine.dir/source/platform/renderer.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
 
 engine: CMakeFiles/engine.dir/source/main.cpp.o
-engine: CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o
 engine: CMakeFiles/engine.dir/source/platform/window_x11.cpp.o
+engine: CMakeFiles/engine.dir/source/platform/event_x11.cpp.o
+engine: CMakeFiles/engine.dir/source/platform/renderer.cpp.o
 engine: CMakeFiles/engine.dir/build.make
 engine: CMakeFiles/engine.dir/compiler_depend.ts
 engine: /usr/lib/libX11.so
 engine: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/satoshi/Documentos/workspace/engine/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

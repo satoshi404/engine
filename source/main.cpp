@@ -1,8 +1,6 @@
-#include <iostream>
-#include <core/launcher/launcher.hpp>
+//#include  <iostream>
 
-auto main(int argc, char** argv) -> int {
-    core::Launcher launcher;
-    launcher.launcher_run();
-    return EXIT_SUCCESS;
+auto main() -> int {
+    // ..
+    return 0;
 }

@@ -1,73 +1,54 @@
-#include "platform.hpp"
+#include "window.hpp"
+#include <stdexcept>
 #include <iostream>
-#include <chrono>
-#include <thread>
 
-#if defined(LINUX_PLATFORM)
+namespace platform {
 
-using namespace std::chrono_literals;
+    Window::Window(const WindowConfig& config) {
+        dpy_ = XOpenDisplay(nullptr);
+        if (!dpy_) {
+            throw std::runtime_error("ERROR: Failed to open X11 display");
+        }
 
-// =============================================================
+        scr_ = XDefaultScreen(dpy_);
+        wd_ = XCreateSimpleWindow(dpy_, XRootWindow(dpy_, scr_),
+                                  config.x, config.y, config.width, config.height,
+                                  0, 0, config.background_color);
+        if (!wd_) {
+            XCloseDisplay(dpy_);
+            throw std::runtime_error("ERROR: Failed to create X11 window");
+        }
 
-platform::PlatformWindow platform::NewPlatformWindow() {
-    PlatformWindow pwindow = {}; // Zero-initialize struct
+        Atom del_window = XInternAtom(dpy_, "WM_DELETE_WINDOW", 0);
+        XSetWMProtocols(dpy_, wd_, &del_window, 1);
 
-    // Open X11 display
-    pwindow.display = XOpenDisplay(nullptr);
-    if (!pwindow.display) {
-        throw std::runtime_error("Failed to open X11 display");
+        XSelectInput(dpy_, wd_, ExposureMask | KeyPressMask | ButtonPressMask);
+
+        XStoreName(dpy_, wd_, config.title);
+
+        std::cout << "Created window on screen " << scr_ << std::endl;
     }
 
-    // Get default screen
-    pwindow.screen = DefaultScreen(pwindow.display);
-
-    // Create a simple window
-    pwindow.window = XCreateSimpleWindow(
-        pwindow.display,
-        RootWindow(pwindow.display, pwindow.screen),
-        0, 0,           // Position (x, y)
-        600, 600,       // Width, height
-        0,              // Border width
-        BlackPixel(pwindow.display, pwindow.screen), // Border color
-        WhitePixel(pwindow.display, pwindow.screen)  // Background color
-    );
-
-    if (!pwindow.window) {
-        XCloseDisplay(pwindow.display);
-        throw std::runtime_error("Failed to create X11 window");
+    Window::~Window() {
+        if (wd_ && dpy_) {
+            XDestroyWindow(dpy_, wd_);
+        }
+        if (dpy_) {
+            XCloseDisplay(dpy_);
+        }
+        std::cout << "Destroyed window" << std::endl;
     }
 
-    // Set window title
-    XStoreName(pwindow.display, pwindow.window, "Hello, World!");
+    void Window::show() {
+        if (!dpy_ || !wd_) {
+            throw std::runtime_error("ERROR: Cannot show invalid window");
+        }
+        XMapWindow(dpy_, wd_);
+        XFlush(dpy_);
+    }
 
-    // Log success (optional, could be replaced with a logging framework)
-    std::printf("Created new X11 window\n");
+    State Window::should_run() const {
+        return (dpy_ && wd_) ? State::RUNNING : State::CLOSE;
+    }
 
-    return pwindow;
-}
-void platform::ShowPlatformWindow(PlatformWindow* pwindow) {
-    
-     // Map the window to make it visible
-     XMapWindow(pwindow->display, pwindow->window);
-     XFlush(pwindow->display);
-}
-
-
-// =============================================================
-
-void platform::SleepPlatformWindow(PlatformWindow* pwindow) {
-
-    std::this_thread::sleep_for(5000ms);
-}
-
-// =============================================================
-
-void platform::DestroyPlatformWindow(PlatformWindow* pwindow) {
-    XDestroyWindow(pwindow->display, pwindow->window);
-    XCloseDisplay(pwindow->display);
-    std::printf("Destroy Window\n");
-}
-
-// =============================================================
-#endif // === window_x11.cpp ===
-// =============================================================
+} // namespace platform

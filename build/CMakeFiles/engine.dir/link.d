@@ -3,8 +3,9 @@ engine: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/crtbeginS.o \
   CMakeFiles/engine.dir/source/main.cpp.o \
-  CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o \
   CMakeFiles/engine.dir/source/platform/window_x11.cpp.o \
+  CMakeFiles/engine.dir/source/platform/event_x11.cpp.o \
+  CMakeFiles/engine.dir/source/platform/renderer.cpp.o \
   /usr/lib/libX11.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/../../../../lib/libm.so \
@@ -48,9 +49,11 @@ engine: \
 
 CMakeFiles/engine.dir/source/main.cpp.o:
 
-CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o:
-
 CMakeFiles/engine.dir/source/platform/window_x11.cpp.o:
+
+CMakeFiles/engine.dir/source/platform/event_x11.cpp.o:
+
+CMakeFiles/engine.dir/source/platform/renderer.cpp.o:
 
 /usr/lib/libX11.so:
 

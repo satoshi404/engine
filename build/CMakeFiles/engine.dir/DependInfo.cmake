@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/satoshi/Documentos/workspace/engine/source/core/launcher/launcher.cpp" "CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o" "gcc" "CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o.d"
   "/home/satoshi/Documentos/workspace/engine/source/main.cpp" "CMakeFiles/engine.dir/source/main.cpp.o" "gcc" "CMakeFiles/engine.dir/source/main.cpp.o.d"
+  "/home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp" "CMakeFiles/engine.dir/source/platform/event_x11.cpp.o" "gcc" "CMakeFiles/engine.dir/source/platform/event_x11.cpp.o.d"
+  "/home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp" "CMakeFiles/engine.dir/source/platform/renderer.cpp.o" "gcc" "CMakeFiles/engine.dir/source/platform/renderer.cpp.o.d"
   "/home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp" "CMakeFiles/engine.dir/source/platform/window_x11.cpp.o" "gcc" "CMakeFiles/engine.dir/source/platform/window_x11.cpp.o.d"
   "" "engine" "gcc" "CMakeFiles/engine.dir/link.d"
   )

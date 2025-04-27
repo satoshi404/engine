@@ -4,18 +4,27 @@ project("engine" VERSION 1.0)
 include_directories(source)
 
 set( SOURCES
-  source/main.cpp
+ # source/main.cpp
   # ======= core/launcher =======
-  source/core/launcher/launcher.cpp
+  #source/core/launcher/launcher.cpp
   # ======= platform =======
   source/platform/window_x11.cpp
+  source/platform/event_x11.cpp
+   source/platform/renderer.cpp
+    #    source/platform/game.cpp
+       #tests/test.cpp
+        tests/flappy.cpp
+
 )
 
 set( HEADERS
 # ======= core/launcher =======
-source/core/launcher/launcher.hpp
+#source/core/launcher/launcher.hpp
   # ======= platform =======
-  source/platform/platform.hpp
+  source/platform/window.hpp
+  source/platform/event.hpp
+   source/platform/renderer.hpp
+   #     source/platform/game.hpp
 )
 
 # Create the executable

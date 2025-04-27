@@ -136,30 +136,6 @@ engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
-source/core/launcher/launcher.o: source/core/launcher/launcher.cpp.o
-.PHONY : source/core/launcher/launcher.o
-
-# target to build an object file
-source/core/launcher/launcher.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.o
-.PHONY : source/core/launcher/launcher.cpp.o
-
-source/core/launcher/launcher.i: source/core/launcher/launcher.cpp.i
-.PHONY : source/core/launcher/launcher.i
-
-# target to preprocess a source file
-source/core/launcher/launcher.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.i
-.PHONY : source/core/launcher/launcher.cpp.i
-
-source/core/launcher/launcher.s: source/core/launcher/launcher.cpp.s
-.PHONY : source/core/launcher/launcher.s
-
-# target to generate assembly for a file
-source/core/launcher/launcher.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/core/launcher/launcher.cpp.s
-.PHONY : source/core/launcher/launcher.cpp.s
-
 source/main.o: source/main.cpp.o
 .PHONY : source/main.o
 
@@ -183,6 +159,54 @@ source/main.s: source/main.cpp.s
 source/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/main.cpp.s
 .PHONY : source/main.cpp.s
+
+source/platform/event_x11.o: source/platform/event_x11.cpp.o
+.PHONY : source/platform/event_x11.o
+
+# target to build an object file
+source/platform/event_x11.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/platform/event_x11.cpp.o
+.PHONY : source/platform/event_x11.cpp.o
+
+source/platform/event_x11.i: source/platform/event_x11.cpp.i
+.PHONY : source/platform/event_x11.i
+
+# target to preprocess a source file
+source/platform/event_x11.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/platform/event_x11.cpp.i
+.PHONY : source/platform/event_x11.cpp.i
+
+source/platform/event_x11.s: source/platform/event_x11.cpp.s
+.PHONY : source/platform/event_x11.s
+
+# target to generate assembly for a file
+source/platform/event_x11.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/platform/event_x11.cpp.s
+.PHONY : source/platform/event_x11.cpp.s
+
+source/platform/renderer.o: source/platform/renderer.cpp.o
+.PHONY : source/platform/renderer.o
+
+# target to build an object file
+source/platform/renderer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/platform/renderer.cpp.o
+.PHONY : source/platform/renderer.cpp.o
+
+source/platform/renderer.i: source/platform/renderer.cpp.i
+.PHONY : source/platform/renderer.i
+
+# target to preprocess a source file
+source/platform/renderer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/platform/renderer.cpp.i
+.PHONY : source/platform/renderer.cpp.i
+
+source/platform/renderer.s: source/platform/renderer.cpp.s
+.PHONY : source/platform/renderer.s
+
+# target to generate assembly for a file
+source/platform/renderer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/source/platform/renderer.cpp.s
+.PHONY : source/platform/renderer.cpp.s
 
 source/platform/window_x11.o: source/platform/window_x11.cpp.o
 .PHONY : source/platform/window_x11.o
@@ -218,12 +242,15 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... engine"
-	@echo "... source/core/launcher/launcher.o"
-	@echo "... source/core/launcher/launcher.i"
-	@echo "... source/core/launcher/launcher.s"
 	@echo "... source/main.o"
 	@echo "... source/main.i"
 	@echo "... source/main.s"
+	@echo "... source/platform/event_x11.o"
+	@echo "... source/platform/event_x11.i"
+	@echo "... source/platform/event_x11.s"
+	@echo "... source/platform/renderer.o"
+	@echo "... source/platform/renderer.i"
+	@echo "... source/platform/renderer.s"
 	@echo "... source/platform/window_x11.o"
 	@echo "... source/platform/window_x11.i"
 	@echo "... source/platform/window_x11.s"
