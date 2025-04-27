@@ -26,7 +26,8 @@ namespace platform {
 
         XStoreName(dpy_, wd_, config.title);
 
-        std::cout << "Created window on screen " << scr_ << std::endl;
+        std::cout << "Created window on screen " << scr_ << " with size "
+                  << config.width << "x" << config.height << std::endl;
     }
 
     Window::~Window() {
@@ -44,6 +45,12 @@ namespace platform {
             throw std::runtime_error("ERROR: Cannot show invalid window");
         }
         XMapWindow(dpy_, wd_);
+        XFlush(dpy_);
+        std::cout << "Mapped window to display" << std::endl;
+
+        // Force expose event
+        XExposeEvent ev = { Expose, 0, 1, dpy_, wd_, 0, 0, 800, 600, 0 };
+        XSendEvent(dpy_, wd_, False, ExposureMask, (XEvent*)&ev);
         XFlush(dpy_);
     }
 

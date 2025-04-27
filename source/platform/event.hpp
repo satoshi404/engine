@@ -28,8 +28,9 @@ namespace platform {
         bool poll(Renderer& renderer);
         void draw() const;
         void wait() const;
+        EventKind kind() const;
 
-        EventKind kind() const { return kind_; }
+
         int x() const { return x_; }
         int y() const { return y_; }
         KeySym keysym() const { return keysym_; }

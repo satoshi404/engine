@@ -1,43 +1,45 @@
-cmake_minimum_required(VERSION 3.31)
-project("engine" VERSION 1.0)
+cmake_minimum_required(VERSION 3.10)
+project(engineProject VERSION 1.0)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Include directories
 include_directories(source)
 
-set( SOURCES
- # source/main.cpp
-  # ======= core/launcher =======
-  #source/core/launcher/launcher.cpp
-  # ======= platform =======
-  source/platform/window_x11.cpp
-  source/platform/event_x11.cpp
-   source/platform/renderer.cpp
-    #    source/platform/game.cpp
-       #tests/test.cpp
+# Source and header files
+set(SOURCES
+        source/platform/window_x11.cpp
+        source/platform/event_x11.cpp
+        source/platform/renderer.cpp
         tests/flappy.cpp
-
+)
+set(HEADERS
+        source/platform/window.hpp
+        source/platform/event.hpp
+        source/platform/renderer.hpp
 )
 
-set( HEADERS
-# ======= core/launcher =======
-#source/core/launcher/launcher.hpp
-  # ======= platform =======
-  source/platform/window.hpp
-  source/platform/event.hpp
-   source/platform/renderer.hpp
-   #     source/platform/game.hpp
-)
-
-# Create the executable
+# Main executable
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
-
-# Specify include directories for the target
 target_include_directories(${PROJECT_NAME} PRIVATE source)
+target_link_libraries(${PROJECT_NAME} PRIVATE X11::X11)
 
-# Find X11 library
+# Find dependencies
 find_package(X11 REQUIRED)
 if(NOT X11_FOUND)
     message(FATAL_ERROR "X11 not found. Please install libx11-dev or equivalent.")
 endif()
 
-# Link X11 library to the executable
-target_link_libraries(${PROJECT_NAME} PRIVATE X11::X11)
+find_package(Python3 COMPONENTS Interpreter Development REQUIRED)
+find_package(pybind11 CONFIG REQUIRED)
+
+# Python binding
+pybind11_add_module(engine
+        bindings/python_binding.cpp
+        source/platform/window_x11.cpp
+        source/platform/event_x11.cpp
+        source/platform/renderer.cpp
+)
+target_include_directories(engine PRIVATE source)
+target_link_libraries(engine PRIVATE X11::X11)

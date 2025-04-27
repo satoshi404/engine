@@ -1,4 +1,5 @@
-/var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/338/bin/ninja/linux/x64/ninja -G Ninja -S /home/satoshi/Documentos/workspace/engine -B /home/satoshi/Documentos/workspace/engine/cmake-build-debug
--- Configuring done (0.0s)
+/var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/var/lib/snapd/snap/clion/338/bin/ninja/linux/x64/ninja -G Ninja -DPython_EXECUTABLE=/home/satoshi/Documentos/workspace/engine/.venv/bin/python -DPython3_EXECUTABLE=/home/satoshi/Documentos/workspace/engine/.venv/bin/python -S /home/satoshi/Documentos/workspace/engine -B /home/satoshi/Documentos/workspace/engine/cmake-build-debug
+-- Found pybind11: /usr/include (found version "2.13.6")
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
 -- Build files have been written to: /home/satoshi/Documentos/workspace/engine/cmake-build-debug

@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: engine
+# Project: engineProject
 # Configurations: Debug
 # =============================================================================
 
@@ -41,7 +41,63 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = /home/satoshi/Documentos/workspace/engine/cmake-build-debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target engine
+# Object build statements for EXECUTABLE target engineProject
+
+
+#############################################
+# Order-only phony target for engineProject
+
+build cmake_object_order_depends_target_engineProject: phony || .
+
+build CMakeFiles/engineProject.dir/source/platform/window_x11.cpp.o: CXX_COMPILER__engineProject_unscanned_Debug /home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp || cmake_object_order_depends_target_engineProject
+  DEP_FILE = CMakeFiles/engineProject.dir/source/platform/window_x11.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  OBJECT_DIR = CMakeFiles/engineProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/engineProject.dir/source/platform
+
+build CMakeFiles/engineProject.dir/source/platform/event_x11.cpp.o: CXX_COMPILER__engineProject_unscanned_Debug /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp || cmake_object_order_depends_target_engineProject
+  DEP_FILE = CMakeFiles/engineProject.dir/source/platform/event_x11.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  OBJECT_DIR = CMakeFiles/engineProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/engineProject.dir/source/platform
+
+build CMakeFiles/engineProject.dir/source/platform/renderer.cpp.o: CXX_COMPILER__engineProject_unscanned_Debug /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp || cmake_object_order_depends_target_engineProject
+  DEP_FILE = CMakeFiles/engineProject.dir/source/platform/renderer.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  OBJECT_DIR = CMakeFiles/engineProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/engineProject.dir/source/platform
+
+build CMakeFiles/engineProject.dir/tests/flappy.cpp.o: CXX_COMPILER__engineProject_unscanned_Debug /home/satoshi/Documentos/workspace/engine/tests/flappy.cpp || cmake_object_order_depends_target_engineProject
+  DEP_FILE = CMakeFiles/engineProject.dir/tests/flappy.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  OBJECT_DIR = CMakeFiles/engineProject.dir
+  OBJECT_FILE_DIR = CMakeFiles/engineProject.dir/tests
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target engineProject
+
+
+#############################################
+# Link the executable engineProject
+
+build engineProject: CXX_EXECUTABLE_LINKER__engineProject_Debug CMakeFiles/engineProject.dir/source/platform/window_x11.cpp.o CMakeFiles/engineProject.dir/source/platform/event_x11.cpp.o CMakeFiles/engineProject.dir/source/platform/renderer.cpp.o CMakeFiles/engineProject.dir/tests/flappy.cpp.o | /usr/lib/libX11.so
+  DEP_FILE = CMakeFiles/engineProject.dir/link.d
+  FLAGS = -g
+  LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/engineProject.dir/link.d
+  LINK_LIBRARIES = /usr/lib/libX11.so
+  OBJECT_DIR = CMakeFiles/engineProject.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = engineProject
+  TARGET_PDB = engineProject.dbg
+
+# =============================================================================
+# Object build statements for MODULE_LIBRARY target engine
 
 
 #############################################
@@ -49,52 +105,56 @@ cmake_ninja_workdir = /home/satoshi/Documentos/workspace/engine/cmake-build-debu
 
 build cmake_object_order_depends_target_engine: phony || .
 
+build CMakeFiles/engine.dir/bindings/python_binding.cpp.o: CXX_COMPILER__engine_unscanned_Debug /home/satoshi/Documentos/workspace/engine/bindings/python_binding.cpp || cmake_object_order_depends_target_engine
+  DEFINES = -Dengine_EXPORTS
+  DEP_FILE = CMakeFiles/engine.dir/bindings/python_binding.cpp.o.d
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source -isystem /usr/include/python3.13
+  OBJECT_DIR = CMakeFiles/engine.dir
+  OBJECT_FILE_DIR = CMakeFiles/engine.dir/bindings
+
 build CMakeFiles/engine.dir/source/platform/window_x11.cpp.o: CXX_COMPILER__engine_unscanned_Debug /home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp || cmake_object_order_depends_target_engine
+  DEFINES = -Dengine_EXPORTS
   DEP_FILE = CMakeFiles/engine.dir/source/platform/window_x11.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source -isystem /usr/include/python3.13
   OBJECT_DIR = CMakeFiles/engine.dir
   OBJECT_FILE_DIR = CMakeFiles/engine.dir/source/platform
 
 build CMakeFiles/engine.dir/source/platform/event_x11.cpp.o: CXX_COMPILER__engine_unscanned_Debug /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp || cmake_object_order_depends_target_engine
+  DEFINES = -Dengine_EXPORTS
   DEP_FILE = CMakeFiles/engine.dir/source/platform/event_x11.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source -isystem /usr/include/python3.13
   OBJECT_DIR = CMakeFiles/engine.dir
   OBJECT_FILE_DIR = CMakeFiles/engine.dir/source/platform
 
 build CMakeFiles/engine.dir/source/platform/renderer.cpp.o: CXX_COMPILER__engine_unscanned_Debug /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp || cmake_object_order_depends_target_engine
+  DEFINES = -Dengine_EXPORTS
   DEP_FILE = CMakeFiles/engine.dir/source/platform/renderer.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
+  FLAGS = -g -std=gnu++17 -fPIC -fvisibility=hidden -fdiagnostics-color=always
+  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source -isystem /usr/include/python3.13
   OBJECT_DIR = CMakeFiles/engine.dir
   OBJECT_FILE_DIR = CMakeFiles/engine.dir/source/platform
 
-build CMakeFiles/engine.dir/tests/flappy.cpp.o: CXX_COMPILER__engine_unscanned_Debug /home/satoshi/Documentos/workspace/engine/tests/flappy.cpp || cmake_object_order_depends_target_engine
-  DEP_FILE = CMakeFiles/engine.dir/tests/flappy.cpp.o.d
-  FLAGS = -g -fdiagnostics-color=always
-  INCLUDES = -I/home/satoshi/Documentos/workspace/engine/source
-  OBJECT_DIR = CMakeFiles/engine.dir
-  OBJECT_FILE_DIR = CMakeFiles/engine.dir/tests
-
 
 # =============================================================================
-# Link build statements for EXECUTABLE target engine
+# Link build statements for MODULE_LIBRARY target engine
 
 
 #############################################
-# Link the executable engine
+# Link the shared module engine.cpython-313-x86_64-linux-gnu.so
 
-build engine: CXX_EXECUTABLE_LINKER__engine_Debug CMakeFiles/engine.dir/source/platform/window_x11.cpp.o CMakeFiles/engine.dir/source/platform/event_x11.cpp.o CMakeFiles/engine.dir/source/platform/renderer.cpp.o CMakeFiles/engine.dir/tests/flappy.cpp.o | /usr/lib/libX11.so
+build engine.cpython-313-x86_64-linux-gnu.so: CXX_MODULE_LIBRARY_LINKER__engine_Debug CMakeFiles/engine.dir/bindings/python_binding.cpp.o CMakeFiles/engine.dir/source/platform/window_x11.cpp.o CMakeFiles/engine.dir/source/platform/event_x11.cpp.o CMakeFiles/engine.dir/source/platform/renderer.cpp.o | /usr/lib/libX11.so
   DEP_FILE = CMakeFiles/engine.dir/link.d
-  FLAGS = -g
+  LANGUAGE_COMPILE_FLAGS = -g
   LINK_FLAGS = -Wl,--dependency-file=CMakeFiles/engine.dir/link.d
   LINK_LIBRARIES = /usr/lib/libX11.so
   OBJECT_DIR = CMakeFiles/engine.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_FILE = engine
-  TARGET_PDB = engine.dbg
+  TARGET_FILE = engine.cpython-313-x86_64-linux-gnu.so
+  TARGET_PDB = engine.cpython-313-x86_64-linux-gnu.so.dbg
 
 
 #############################################
@@ -122,6 +182,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
+build engine: phony engine.cpython-313-x86_64-linux-gnu.so
+
 # =============================================================================
 # Folder targets.
 
@@ -130,14 +192,7 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 #############################################
 # Folder: /home/satoshi/Documentos/workspace/engine/cmake-build-debug
 
-build codegen: phony
-
-# =============================================================================
-
-#############################################
-# Folder: /home/satoshi/Documentos/workspace/engine/cmake-build-debug
-
-build all: phony engine
+build all: phony engineProject engine.cpython-313-x86_64-linux-gnu.so
 
 # =============================================================================
 # Built-in targets
@@ -146,14 +201,14 @@ build all: phony engine
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /home/satoshi/Documentos/workspace/engine/CMakeLists.txt /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckFunctionExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckLibraryExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFontconfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFreetype.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindX11.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /home/satoshi/Documentos/workspace/engine/CMakeLists.txt /usr/lib/cmake/pybind11/pybind11Common.cmake /usr/lib/cmake/pybind11/pybind11Config.cmake /usr/lib/cmake/pybind11/pybind11ConfigVersion.cmake /usr/lib/cmake/pybind11/pybind11NewTools.cmake /usr/lib/cmake/pybind11/pybind11Targets.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckFunctionExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckLibraryExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFontconfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFreetype.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPython/Support.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPython3.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindX11.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/satoshi/Documentos/workspace/engine/CMakeLists.txt /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckFunctionExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckLibraryExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFontconfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFreetype.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindX11.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
+build /home/satoshi/Documentos/workspace/engine/CMakeLists.txt /usr/lib/cmake/pybind11/pybind11Common.cmake /usr/lib/cmake/pybind11/pybind11Config.cmake /usr/lib/cmake/pybind11/pybind11ConfigVersion.cmake /usr/lib/cmake/pybind11/pybind11NewTools.cmake /usr/lib/cmake/pybind11/pybind11Targets.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCXXInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeCommonLanguageInclude.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeGenericSystem.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeInitializeConfigs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeLanguageInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CMakeSystemSpecificInitialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckCXXSourceCompiles.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckFunctionExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/CheckLibraryExists.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/CMakeCommonCompilerMacros.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Compiler/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFontconfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindFreetype.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageHandleStandardArgs.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPackageMessage.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPkgConfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPython/Support.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindPython3.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/FindX11.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCXXLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CMakeCommonLinkerInformation.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckCompilerFlag.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckFlagCommonConfig.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Internal/CheckSourceCompiles.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linker/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-C.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU-CXX.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-GNU.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux-Initialize.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/Linux.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/Platform/UnixPaths.cmake /var/lib/snapd/snap/clion/338/bin/cmake/linux/x64/share/cmake-3.31/Modules/SelectLibraryConfigurations.cmake CMakeCache.txt CMakeFiles/3.31.6/CMakeCCompiler.cmake CMakeFiles/3.31.6/CMakeCXXCompiler.cmake CMakeFiles/3.31.6/CMakeSystem.cmake: phony
 
 
 #############################################
