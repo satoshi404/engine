@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/satoshi/Documentos/workspace/engine/build",
+  "command": "/usr/bin/c++  -I/home/satoshi/Documentos/workspace/engine/source -g -o CMakeFiles/engine.dir/source/main.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/main.cpp",
+  "file": "/home/satoshi/Documentos/workspace/engine/source/main.cpp",
+  "output": "CMakeFiles/engine.dir/source/main.cpp.o"
+},
+{
+  "directory": "/home/satoshi/Documentos/workspace/engine/build",
+  "command": "/usr/bin/c++  -I/home/satoshi/Documentos/workspace/engine/source -g -o CMakeFiles/engine.dir/source/platform/window_x11.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp",
+  "file": "/home/satoshi/Documentos/workspace/engine/source/platform/window_x11.cpp",
+  "output": "CMakeFiles/engine.dir/source/platform/window_x11.cpp.o"
+},
+{
+  "directory": "/home/satoshi/Documentos/workspace/engine/build",
+  "command": "/usr/bin/c++  -I/home/satoshi/Documentos/workspace/engine/source -g -o CMakeFiles/engine.dir/source/platform/event_x11.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp",
+  "file": "/home/satoshi/Documentos/workspace/engine/source/platform/event_x11.cpp",
+  "output": "CMakeFiles/engine.dir/source/platform/event_x11.cpp.o"
+},
+{
+  "directory": "/home/satoshi/Documentos/workspace/engine/build",
+  "command": "/usr/bin/c++  -I/home/satoshi/Documentos/workspace/engine/source -g -o CMakeFiles/engine.dir/source/platform/renderer.cpp.o -c /home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp",
+  "file": "/home/satoshi/Documentos/workspace/engine/source/platform/renderer.cpp",
+  "output": "CMakeFiles/engine.dir/source/platform/renderer.cpp.o"
+}
+]

@@ -1,0 +1,11 @@
+# ninja log v6
+2	647	1745733453288263846	CMakeFiles/engine.dir/tests/flappy.cpp.o	10f3703499180f6b
+855	913	1745732854876331841	engine	280a7037fbe53a85
+1	16	1745728796180017450	CMakeFiles/engine.dir/source/main.cpp.o	578f5a069abf921c
+1	250	1745727210340570366	CMakeFiles/engine.dir/source/platform/window_x11.cpp.o	cd0cb5abf94756f6
+1	384	1745733453286481118	CMakeFiles/engine.dir/source/platform/event_x11.cpp.o	2448eae536e057f7
+1	474	1745732854023780838	CMakeFiles/engine.dir/source/platform/game.cpp.o	14818cdb7994c3e2
+1	362	1745733453287940823	CMakeFiles/engine.dir/source/platform/renderer.cpp.o	fa4b8d1521b65074
+1	53	1745733479960529180	build.ninja	c519cf5d452344e4
+1	443	1745730589604173269	CMakeFiles/engine.dir/tests/test.cpp.o	855a075e488543b1
+1	51	1745733481515290099	engine	205ce4c44a49a05c

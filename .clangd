@@ -1,0 +1,5 @@
+CompileFlags:
+  Add:
+    - -I/home/satoshi/Documentos/workspace/engine/source
+
+  CompilationDatabase: /home/satoshi/Documentos/workspace/engine/build
